@@ -1,0 +1,153 @@
+<html>
+
+<head>
+  <!-- Bootstrap -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/font-awesome/css/all.min.css" rel="stylesheet">
+  <!-- Fonts -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+
+  <!-- Styles -->
+  <link href="css/gestion.css" rel="stylesheet">
+</head>
+
+<body >
+  
+  <h1 class="site-heading text-center text-white d-none d-lg-block">
+
+    <span class="site-heading-lower tittle">Tienda Online</span>
+  </h1>
+
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="tienda.html">Tienda Online</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav mx-auto">
+          
+          <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="tienda.html">Tienda</a>
+          </li>
+          <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="contacto.html">Contacto</a>
+          
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Heading -->
+  <section class="page-section clearfix ">
+    <div class="container-fluid bg-white ">
+
+      <div class="row p-2 roww">
+
+        <div class="col">
+          <div class="form-group float-left">
+           <!-- <button id="verCarrito" type="button" class="btn btn-primary "<i class="fa-solid fa-cart-shopping-fast"></i></button>-->
+           <i id="verCarrito"  class="fas fa-shopping-cart fa-2x hand-cursor"></i>
+          </div>
+          <div class="form-group float-right">
+            <input id="input_search" type="text" class="form-control" placeholder="Buscar" maxlenght="10">
+          </div>
+        </div>
+
+      </div>
+      <div class="row p-4 coll">
+
+        <div class="col-4 coll">
+
+          <div id="lista-categorias" class="list-group list">
+          </div>
+
+        </div>
+        <div class="col-8">
+          <div id="lista-productos" class="row">
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- Carrito -->
+  <div id="modalCarrito" class="modal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Resumen Compra</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <table class="table table-sm table-bordered">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Producto</th>
+                  <th>Cantidad</th>
+                  <th>Precio</th>
+                  <th>Descuento</th>
+                  <th>Op</th>
+                </tr>
+              </thead>
+              <tbody id="listaCarrito"></tbody>
+            </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary btn-sm">Confirma Compra</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <!-- Footer -->
+  <footer class="footer text-faded text-center py-5">
+    <div class="container">
+      <p class="m-0">
+        <a >
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        <a >
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        <a >
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </p>
+      
+      <p class="m-0 mbt1">&copy; Tienda Online</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Javascript -->
+    <script src="js/tienda.js"></script>
+</body>
+
+
+</html>
