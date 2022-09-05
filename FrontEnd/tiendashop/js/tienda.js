@@ -7,20 +7,13 @@ $(document).ready(function () {
 
     listarCategorias()
     listarProductosBase()
-    //como le deja usar jquery pues mas breve el manejo del DOM
-    // los elementos del DOM con id se llaman con $('#cargar')
-    // los elementos del DOM con una clase especifica se llamana $('.text-user')
-
-    // desde JS como la sabe puede manejar todos los eventos del DOM 
-    // para este caso un click asociado al boton con id cargar
-
-    // hay un monton de eventos click change load etc
+    
     $(document).on('click', '.cargar_categoria', function () {
         var data = this.dataset
         if (data.id > 0) {
             $.ajax({
-                method: 'GET', // metodo POST para agregar o actualizar cosas en general para enviar cualquier cosa a la api o backend 
-                dataType: 'json', // como es apiREST todo va en JSON
+                method: 'GET',  
+                dataType: 'json',
                 url: URL_API + "api/productos/categoria/" + data.id, // URL de la api,
             }).done(function (res) {
                 $('#lista-productos').html("");
@@ -73,8 +66,8 @@ $(document).ready(function () {
         var data = this.dataset
         if (data.id > 0) {
             $.ajax({
-                method: 'GET', // metodo POST para agregar o actualizar cosas en general para enviar cualquier cosa a la api o backend 
-                dataType: 'json', // como es apiREST todo va en JSON
+                method: 'GET', 
+                dataType: 'json', 
                 url: URL_API + "api/producto/" + data.id, // URL de la api,
             }).done(function (res) {
                 if (res.error === 0) {
@@ -168,12 +161,12 @@ function buscar(arrar, valor) {
     }
     return null;
 }
-//esto sera para taer datos ahora tiene que poder enviarlos supongo
+
 function listarCategorias() {
 
     $.ajax({
-        method: 'GET', // metodo GET para consultar cosas POST para agregar o actualizar cosas 
-        dataType: 'json', // como es apiREST todo va en JSON
+        method: 'GET', 
+        dataType: 'json', 
         url: URL_API + "api/categorias", // URL de la api
     }).done(function (res) {
         if (res.error === 0) {
@@ -196,8 +189,8 @@ function listarCategorias() {
 function listarProductosBase() {
 
     $.ajax({
-        method: 'GET', // metodo GET para consultar cosas POST para agregar o actualizar cosas 
-        dataType: 'json', // como es apiREST todo va en JSON
+        method: 'GET', 
+        dataType: 'json',
         url: URL_API + "api/productos_base", // URL de la api
     }).done(function (res) {
 
@@ -235,8 +228,8 @@ function listarProductosBase() {
 function buscarProductos(filtro) {
 
     $.ajax({
-        method: 'GET', // metodo GET para consultar cosas POST para agregar o actualizar cosas 
-        dataType: 'json', // como es apiREST todo va en JSON
+        method: 'GET', 
+        dataType: 'json',
         url: URL_API + "api/productos/filter?like=" + filtro, // URL de la api
     }).done(function (res) {
         $('#lista-productos').html("");
